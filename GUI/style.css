@@ -1,0 +1,89 @@
+:root {
+  --bg-color: #f4f4f4;
+  --text-color: #333;
+  --box-color: #007acc;
+  --message-color: green;
+}
+
+body.dark {
+  --bg-color: #1e1e1e;
+  --text-color: #f4f4f4;
+  --box-color: #444;
+  --message-color: #0f0;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: var(--bg-color);
+  color: var(--text-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  transition: background 0.3s, color 0.3s;
+}
+
+.container {
+  background: var(--bg-color);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  transition: background 0.3s, color 0.3s;
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+#countdown {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+#countdown div {
+  background: var(--box-color);
+  color: white;
+  padding: 20px;
+  border-radius: 5px;
+  min-width: 60px;
+  animation: pop 1s infinite alternate;
+}
+
+#countdown span {
+  font-size: 32px;
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+#message {
+  font-size: 20px;
+  color: var(--message-color);
+}
+
+#toggleMode {
+  margin-top: 15px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #666;
+  color: white;
+  transition: background 0.3s;
+}
+
+#toggleMode:hover {
+  background-color: #555;
+}
+
+@keyframes pop {
+  from { transform: scale(1); }
+  to { transform: scale(1.05); }
+}
