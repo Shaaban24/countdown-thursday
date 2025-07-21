@@ -34,6 +34,14 @@ function updateCountdown() {
 const timerInterval = setInterval(updateCountdown, 1000);
 updateCountdown();
 
-document.getElementById("toggleMode").addEventListener("click", () => {
+const toggleModeBtn = document.getElementById("toggleMode");
+
+toggleModeBtn.addEventListener("click", () => {
   document.body.classList.toggle("dark");
+
+  if (document.body.classList.contains("dark")) {
+    toggleModeBtn.textContent = "🌞 Toggle Theme";
+  } else {
+    toggleModeBtn.textContent = "🌙 Toggle Theme";
+  }
 });

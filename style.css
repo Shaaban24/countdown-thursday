@@ -8,7 +8,7 @@
 body.dark {
   --bg-color: #1e1e1e;
   --text-color: #f4f4f4;
-  --box-color: #444;
+  --box-color: #007acc;
   --message-color: #0f0;
 }
 
@@ -74,7 +74,7 @@ h1 {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  background-color: #666;
+  background-color: #007acc;
   color: white;
   transition: background 0.3s;
 }
